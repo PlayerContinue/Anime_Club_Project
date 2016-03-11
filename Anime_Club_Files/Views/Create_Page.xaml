@@ -1,0 +1,62 @@
+﻿<Page x:Class="Anime_Club_Files.Views.Create_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Anime_Club_Files.Views"
+      
+      mc:Ignorable="d"
+      d:DesignHeight="350" d:DesignWidth="525"
+      Name="Enter_Page"
+      Title="Create_Page">
+    <Grid Height="Auto" Width="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition>
+                <RowDefinition.Height>
+                    <Binding ElementName="Enter_Page" Path="ActualHeight" Converter="{StaticResource ConverterClass}"  ConverterParameter="-;5"/>
+
+                </RowDefinition.Height>
+                
+            </RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+                <ColumnDefinition.Width>
+                    <Binding ElementName="Enter_Page" Path="ActualWidth" Converter="{StaticResource ConverterClass}"  ConverterParameter="/;5"/>
+                </ColumnDefinition.Width>
+                
+            </ColumnDefinition>
+            <ColumnDefinition>
+
+                <ColumnDefinition.Width>
+                    <Binding ElementName="Enter_Page" Path="ActualWidth" Converter="{StaticResource ConverterClass}"  ConverterParameter="/;1"/>
+                </ColumnDefinition.Width>
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="start_voting" Grid.Row="0" Grid.Column="0" Content="Start Voting!" HorizontalAlignment="Left" VerticalAlignment="Top" Click="beginVoting"/>
+            <Button x:Name="randomize" Grid.Row="1" Grid.Column="0"  Content="Randomize_List" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        </Grid>
+
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="user_list"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" >
+            <TextBox.Height>
+                <Binding ElementName="Enter_Page" Path="ActualHeight" Converter="{StaticResource ConverterClass}"  ConverterParameter="-;0"/>
+            </TextBox.Height>
+            <TextBox.Width>
+                <Binding ElementName="Enter_Page" Path="ActualWidth" Converter="{StaticResource ConverterClass}"  ConverterParameter="/;1.4"/>
+            </TextBox.Width>
+        </TextBox>
+
+
+
+    </Grid>
+</Page>

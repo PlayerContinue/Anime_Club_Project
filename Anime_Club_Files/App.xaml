@@ -1,0 +1,10 @@
+﻿<Application x:Class="Anime_Club_Files.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converter="clr-namespace:Anime_Club_Files.Convertors"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <converter:ConverterClass x:Key="ConverterClass"/>
+        <converter:ConverterClass x:Key="ChangeOnNumberOfItems"/>
+    </Application.Resources>
+</Application>
